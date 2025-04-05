@@ -1,0 +1,207 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Header and Summary */
+header h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.summary p {
+  font-size: 1.1em;
+  margin: 10px;
+}
+
+/* Tab Navigation */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s ease;
+  color: #555;
+}
+
+.tabs button:hover {
+  background: #f9f9f9;
+}
+
+.tabs button.active {
+  color: #1e90ff;
+  border-bottom: 2px solid #1e90ff;
+  font-weight: bold;
+}
+
+/* Tab Content Area */
+.tab-content {
+  padding: 20px;
+}
+
+/* Form Containers */
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.history-container, .analytics-container {
+  padding: 10px 20px;
+}
+
+/* Form styles for Income and Expense Forms */
+.income-form, .expense-form {
+  width: 100%;
+  max-width: 500px;
+  background: #e8f4f8;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+form input[type="number"],
+form input[type="date"],
+form input[type="text"] {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="number"]:focus,
+form input[type="date"]:focus,
+form input[type="text"]:focus {
+  outline: none;
+  border-color: #1e90ff;
+}
+
+form button {
+  width: 100%;
+  padding: 10px 15px;
+  background: #1e90ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #0f7ae5;
+}
+
+/* Error Styling */
+input.error {
+  border-color: #ff4040;
+}
+
+.error-message {
+  color: #ff4040;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+/* Transactions list styling */
+.transaction-list {
+  margin-top: 20px;
+}
+
+.transaction-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.transaction-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transaction-list li button {
+  background: #ff4040;
+  border: none;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.transaction-list li button:hover {
+  background: #ff0000;
+}
+
+/* Chart Styles */
+.chart-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .summary {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tabs {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  form input[type="number"],
+  form input[type="date"],
+  form input[type="text"] {
+    padding: 6px 8px;
+  }
+  
+  form button {
+    padding: 8px 12px;
+  }
+}

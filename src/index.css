@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+  background-color: #f7fafc;
+}
+
+header {
+  background-color: #000;
+}
+
+header a {
+  color: #fff;
+}
+
+header a:hover {
+  color: #ddd;
+}
+
+form input {
+  background-color: #f0f4f8;
+}
+
+form input:focus {
+  background-color: #e2e8f0;
+}
